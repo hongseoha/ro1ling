@@ -4,6 +4,8 @@ import CardList from "components/ListPage/CardList";
 import Loading from "components/common/Loading";
 import { ALL_POST_PAGE } from "constants";
 import styles from "./AllPostPage.module.scss";
+import Search from 'components/Search/Search';
+
 
 function AllPostPage() {
   const [itemInfo, setItemInfo] = useState({
@@ -119,6 +121,7 @@ function AllPostPage() {
 
   return (
     <main>
+      <Search />
       <section className={styles["card-section"]}>
         <ol className={styles["card-list"]}>
           {itemInfo.items.map((item) => (
